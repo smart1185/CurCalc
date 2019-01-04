@@ -1,0 +1,38 @@
+﻿<Window x:Class="CurCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CurCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="304.268" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="Калькулятор валют" FontSize="24"></Label>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbxSum1" Margin="5" KeyUp="TbxSum1_KeyUp" Text="1"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="tbxSum2" Margin="5" KeyUp="TbxSum2_KeyUp" Text="1"></TextBox>
+
+        <TextBox Grid.Row="1" Grid.Column="3" x:Name="cbxCur1" Margin="5" Text="KZT" TextAlignment="Left" Padding="5"></TextBox>
+        <ComboBox Grid.Row="2" Grid.Column="3" x:Name="cbxCur2" Margin="5" DisplayMemberPath="Title" SelectionChanged="CbxCur2_SelectionChanged"></ComboBox>
+
+        <Label Grid.Row="4" Grid.Column="1" x:Name="lblTotalSum" Margin="5" Background="AntiqueWhite"></Label>
+        <Label Grid.Row="4" Grid.Column="3" x:Name="lblCurrency" Margin="5" Background="AntiqueWhite"></Label>
+
+        <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" x:Name="lblMessage" Background="LightGray"></Label>
+    </Grid>
+</Window>
